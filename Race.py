@@ -6,7 +6,7 @@ class race:
         self.magMod = magMod
         self.agiMod = agiMod
 
-humanDescription = "A simple and ordinary person, decent at most things but that is all"
+humanDescription = "Humans: With their ambition and resilience, Humans have built mighty kingdoms and sprawling cities.\nThey are skilled in the arts of war and diplomacy, often at the forefront of facing external threats."
 human = race(humanDescription, 1, 1, 1, 1)
 
 elf = race()
