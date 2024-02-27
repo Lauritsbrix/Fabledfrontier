@@ -7,15 +7,22 @@ def mapPainter():
     templateFile = open('maps/templateFile', 'w')
     screenLine = ""
     for y in range(GAME_HEIGHT):
+        currentY = y
         for x in range(GAME_WIDTH):
-            if x == 0 or x == GAME_WIDTH - 1:
-                    screenLine += "|"
-            elif y == 2 or y == GAME_HEIGHT - 1:
+            currentX = x
+            if currentX == 0 or currentX == GAME_WIDTH - 1:
+                screenLine += "|"
+            elif currentX == 3 and currentY == 1:
+                screenLine += "health"
+                currentX += 6
+            elif currentY == 2:
                 screenLine += "-"
+            elif currentY == GAME_HEIGHT - 1:
+                screenLine += "_"
             else:
                 screenLine += " "
         
-        if y < GAME_HEIGHT:
+        if currentY < GAME_HEIGHT:
             screenLine += "\n"
     
     os.system('cls')
