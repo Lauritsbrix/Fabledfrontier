@@ -43,9 +43,13 @@ def paintInterface(interface, player):
         x = 0
         while x < GAME_WIDTH:
             if interfaceDict[(x, y)] == 'n':
-                nameString = "Name: " + player.name.capitalize()
+                nameString = "Name:   " + player.name.capitalize()
                 screenLine += nameString
                 x += len(nameString)
+            elif interfaceDict[(x, y)] == 'h':
+                healthString = "Health: " + str(player.stats.health)
+                screenLine += healthString
+                x += len(healthString)
             else:
                 screenLine += interfaceDict[(x, y)]
                 x += 1
@@ -91,8 +95,8 @@ def initInterfacesDict(interfacesDict, interfaceFiles):
         tempInterfaceDict = getInterfaceDictFromFile(interfaceFiles[interfaceFile])
         interfacesDict[interfaceFile] = tempInterfaceDict
 
-playerStats = stats(10, 1, 1, 1, 1)
-player = character(0, "Gjarle", "Human", "Mage")
+playerStats = stats(2400)
+player = character(0, "Gjarle", "Human", "Mage", charStats = playerStats)
 
 initInterfacesDict(interfaces, interfaceFiles)
-paintInterface('basicMap', player)
+paintInterface('basicInterface', player)
