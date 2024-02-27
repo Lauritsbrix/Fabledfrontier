@@ -4,7 +4,6 @@ GAME_WIDTH = 120
 GAME_HEIGHT = 20
 
 
-
 def mapPainter():
     templateFile = open('maps/templateFile', 'w')
     screenLine = ""

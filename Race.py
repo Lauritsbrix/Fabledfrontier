@@ -1,17 +1,13 @@
 class race:
-    def __init__(self):
-        self.description= ""
-        self.vitMod= 0
-        self.strMod= 0
-        self.magMod= 0
-        self.agiMod= 0
+    def __init__(self, description, vitMod, strMod, magMod, agiMod):
+        self.description = description
+        self.vitMod = vitMod
+        self.strMod = strMod
+        self.magMod = magMod
+        self.agiMod = agiMod
 
-human = race()
-human.description = "A simple and ordinary person, decent at most things but that is all"
-human.vitMod = 1
-human.strMod = 1
-human.magMod = 1
-human.agiMod = 1
+humanDescription = "A simple and ordinary person, decent at most things but that is all"
+human = race(humanDescription, 1, 1, 1, 1)
 
 elf = race()
 elf.description = "A mystical folk from the deep forest, has great magical attributes and are highly adapt."
