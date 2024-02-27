@@ -1,11 +1,16 @@
 class RPGCClass:
-    def __init__(self):
+    def __init__(self, description, vitMod, strMod, magMod,agiMod):
         self.description= ""
-        self.vitMod= 0
-        self.strMod= 0
-        self.magMod= 0
-        self.agiMod= 0
+        self.vitMod= vitMod
+        self.strMod= strMod
+        self.magMod= magMod
+        self.agiMod= agiMod
 
-mage = RPGCClass()
-warrior = RPGCClass()
+Mage = RPGCClass()
+Warrior = RPGCClass()
 Archer = RPGCClass()
+
+warriorDescription =""
+mageDescription = ""
+archerDesription = ""
+
