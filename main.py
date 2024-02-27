@@ -1,6 +1,8 @@
 # import mapRenderer
 import os
 import character
+import Race
+import RPGClass
 
 # mapRenderer.mapPainter()
 
@@ -32,8 +34,13 @@ def __str(self):
 def create_Character():
     print("Welcome to Character creation!")
     name = input("Enter your name: ")
+    while True:
+        print("Races avallable: ")
+        for race_name in race_info
     race = input(f"Enter your race: [Dwarf, Human or Elf] ")
     RPGClass = input("Enter your Class: [Warrior, Mage or Artcher] ")
+
+
 
     player = character.character("player", name, race, RPGClass)
     return player
@@ -45,4 +52,6 @@ print(f"Nice to meeet you {name}")
 start = input("Are you ready for the adventure if your life? ")
 
 player = create_Character()
+
+
 
