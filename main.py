@@ -36,8 +36,9 @@ def create_Character():
     name = input("Enter your name: ")
     while True:
         print("Races avallable: ")
-        for race_name in race_info
-    race = input(f"Enter your race: [Dwarf, Human or Elf] ")
+        for race_name in RPGClass.classes:
+            print(race_name)
+            race = input(f"Enter your race: [Dwarf, Human or Elf] ")
     RPGClass = input("Enter your Class: [Warrior, Mage or Artcher] ")
 
 
