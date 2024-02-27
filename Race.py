@@ -11,4 +11,4 @@ race_info = {
         'description': 'Warriors are brave fighters adept with heavy weapons and armor. They have high health and strength.',
         'stats': {'vitality': 2, 'strength': 2, 'magic': 0, 'agility': 0},
     },
-}
+} 
