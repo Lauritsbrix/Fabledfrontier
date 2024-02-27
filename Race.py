@@ -10,14 +10,14 @@ humanDescription = "Humans: With their ambition and resilience, Humans have buil
 human = race(humanDescription, 1, 1, 1, 1)
 
 elf = race()
-elf.description = "Elves: Gifted with an innate connection to nature and magic, Elves are the stewards of the ancient forests.\nTheir agility, grace, and mastery over the arcane arts make them formidable allies against the encroaching darkness."
+elf.description = "A mystical folk from the deep forest, has great magical attributes and are highly adapt."
 elf.vitMod = 0
 elf.strMod = 0
 elf.magMod = 2
 elf.agiMod = 2
 
 dwarf = race()
-dwarf.description = "Dwarves: Deep within the mountains, the Dwarves have crafted grand underground cities filled with intricate tunnels and majestic halls.\nMasters of craftsmanship and metallurgy, Dwarves provide the strength and resilience needed for the world's defense."
+dwarf.description = "Proud and brave fighters adept with heavy weapons. They have high health and strength."
 dwarf.vitMod = 2
 dwarf.strMod = 2
 dwarf.magMod = 0
