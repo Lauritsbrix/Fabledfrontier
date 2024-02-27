@@ -14,3 +14,4 @@ warriorDescription ="Masters of melee combat, Warriors charge into battle with r
 mageDescription = "Wielding arcane powers, Mages command the elements and cast spells from a distance,\nmanipulating reality with ancient knowledge and unleashing powerful magical forces."
 archerDesription = "Masters of precision, Archers excel in ranged combat,\nexpertly wielding bows to strike from a distance with unmatched accuracy and agility on the Fabled Frontier."
 
+

@@ -5,3 +5,13 @@ three distinct races coexist – Humans, Elves, and Dwarves. For centuries.
 They have shared the blessings of their fertile lands, harnessed the power of arcane forces, and built great cities that touched the skies.
 """ 
 print(text)
+
+name = input("What is your name? ")
+print(f"Nice to meeet you {name}")
+start = input("Are you ready for the adventure if your life? ")
+
+def startCon(start):
+    accpetableAnswer = ["ja"]
+    while start.lower() not in accpetableAnswer:
+        print("You have to be ready")
+    start = input("are you ready for an adventure?")
