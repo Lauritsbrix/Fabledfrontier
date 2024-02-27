@@ -7,8 +7,7 @@ import RPGClass
 # mapRenderer.mapPainter()
 
 #Introduktion til Luminos
-text =  """
-In the realm of Luminos, a land shrouded in the mists of ancient magic and surrounded by untamed wilderness,
+text =  """In the realm of Luminos, a land shrouded in the mists of ancient magic and surrounded by untamed wilderness,
 three distinct races coexist – Humans, Elves, and Dwarves. For centuries.
 They have shared the blessings of their fertile lands, harnessed the power of arcane forces, and built great cities that touched the skies.
 """
@@ -56,11 +55,23 @@ Agility: {1 + raceChoice.agiMod}""")
         input("Press enter to continue")
         os.system('cls')
 
+
+
         print("Classes available")
         for class_name in RPGClass.classes:
             print(class_name.capitalize())
-            
-        rpgClass = input("Enter your Class: [Warrior, Mage or Artcher] ")
+
+        rpgClass = input("Enter your Class: [Warrior, Mage or Archer] ").lower()
+        os.system('cls')
+
+        classChoice = RPGClass.classes[rpgClass]
+
+        print(f"""Description: {classChoice.description}
+{classChoice.name.capitalize()} has the following stats
+HP: {10 + classChoice.vitMod}
+Strength: {1 + classChoice.strMod}
+Inteligence: {1 + classChoice.magMod}
+Agility: {1 + classChoice.agiMod}""")
 
         player = character.character("player", name, race, rpgClass)
         return player
