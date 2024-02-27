@@ -95,8 +95,7 @@ def initInterfacesDict(interfacesDict, interfaceFiles):
         tempInterfaceDict = getInterfaceDictFromFile(interfaceFiles[interfaceFile])
         interfacesDict[interfaceFile] = tempInterfaceDict
 
-playerStats = stats(2400)
-player = character(0, "Gjarle", "Human", "Mage", charStats = playerStats)
+def init():
+    initInterfacesDict(interfaces, interfaceFiles)
 
-initInterfacesDict(interfaces, interfaceFiles)
-paintInterface('basicInterface', player)
+# paintInterface('basicInterface', player)
