@@ -50,7 +50,7 @@ print(text)
 
 name = input("What is your name? ")
 print(f"Nice to meeet you {name}")
-start = input("Are you ready for the adventure if your life? ")
+start = input("Are you ready for the adventure if of your life? ")
 
 player = create_Character()
 
