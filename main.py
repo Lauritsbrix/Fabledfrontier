@@ -1,0 +1,3 @@
+import mapRenderer
+
+mapRenderer.mapPainter()
