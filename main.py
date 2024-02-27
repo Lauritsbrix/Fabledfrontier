@@ -1,4 +1,4 @@
-import mapRenderer
+# import mapRenderer
 import os
 
 # mapRenderer.mapPainter()
@@ -9,7 +9,7 @@ In the realm of Luminos, a land shrouded in the mists of ancient magic and surro
 three distinct races coexist – Humans, Elves, and Dwarves. For centuries.
 They have shared the blessings of their fertile lands, harnessed the power of arcane forces, and built great cities that touched the skies.
 """
-
+os.system('cls')
 print(text)
 
 name = input("What is your name? ")
