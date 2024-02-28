@@ -10,6 +10,8 @@ def init():
     global root
     global images
 
+    images = {}
+
     root = Tk()
     root.title("Luminos")
     root.geometry(str(settings.gameWidth) + 'x' + str(settings.gameHeight))
@@ -17,7 +19,10 @@ def init():
     for image in os.listdir("images"):
         images[image] = "images/" + image
     
-    introText = Label(root, text=lore.introText)
+    introText = Label(root, text=lore.introText, font=("Helvetica", 16))
+    introText.pack(pady=10)
+
+    continueButton = 0
 
 def chooseClass(rpgClass):
     chosenClass = rpgClass
