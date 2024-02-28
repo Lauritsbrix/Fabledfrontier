@@ -1,30 +1,32 @@
-#Præcisions mønster i forskellige patterns, der skal klikkes inden for et spænd af 2 sec, før der kommer et nyt.
-import combat
 import tkinter as tk
 import random
-from stats import stats
-from character import character
-
 
 def generate_combination():
     return random.sample(range(1, 10), 3)
 
 def button_click(button_id):
-    damage = 1
     global current_combination
-    combat.dealdamage(damage,enemy)
-    npc_health_label.config(text=enemy.stats.health)
+    global player_damage
+    global npc_health
+
     if button_id in current_combination:
         label.config(text=f"You hit button {button_id}!")
-        damage += 1  # Adjust damage as needed
+        npc_health -= player_damage  # Adjust damage calculation as needed
+        update_npc_health_label()
+
     else:
         label.config(text="Missed!")
+
+def update_npc_health_label():
+    npc_health_label.config(text=f"NPC Health: {npc_health}")
+
+    if npc_health <= 0:
+        label.config(text="You defeated the NPC!")
 
 def update_combination():
     global current_combination
     current_combination = generate_combination()
     pattern_label.config(text=f"Current Pattern: {current_combination}")
-    root.after(2000, update_combination)
 
 def root_destroyed():
     try:
@@ -42,9 +44,11 @@ root.title("Combat System - Numlock Grid")
 label = tk.Label(root, text="Click the correct pattern to deal damage!")
 label.grid(row=0, column=0, columnspan=3)
 
-
 pattern_label = tk.Label(root, text="")
 pattern_label.grid(row=1, column=0, columnspan=3)
+
+npc_health_label = tk.Label(root, text="NPC Health: 10")
+npc_health_label.grid(row=2, column=0, columnspan=3)
 
 buttons = []
 for i in range(1, 10):
@@ -54,19 +58,13 @@ for i in range(1, 10):
     button.grid(row=row, column=col, padx=5, pady=5)
     buttons.append(button)
 
-player_damage = 1
+player_damage = 
 npc_health = 10
 current_combination = generate_combination()
 update_combination()
 
-enemystats = stats(10)
-enemy = character("enemy","orc","orc","warrior",enemystats)
-
-npc_health_label = tk.Label(root, text= str(enemy.stats.health))
-npc_health_label.grid(row=2, column=0, columnspan=3)
-
 window_width = 640
-window_height = 320
+window_height = 400
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 
