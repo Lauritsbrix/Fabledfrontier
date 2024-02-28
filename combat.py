@@ -40,7 +40,14 @@ def main(player, enemy):
 
         time.sleep(2)
    
-   
+def dealdamage(damage,enemy):
+    enemy.stats.health-=damage
+
+print(str(orc.stats.health))
+
+dealdamage(5,orc)
+print(str(orc.stats.health))
+
 
         
 
@@ -54,8 +61,8 @@ def attack(attacker, deffender):
     
     
 
-attack(pers, orc)
-main(pers, orc)
+#attack(pers, orc)
+#main(pers, orc)
 
 
 
