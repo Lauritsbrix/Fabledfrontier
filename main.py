@@ -116,10 +116,9 @@ initializeGame()
 os.system('cls')
 print(text)
 
-name = input("What is your name? ")
 print()
-print(f"Nice to meeet you {name}")
-start = input("Are you ready for the adventure if of your life? ")
+print(f"Nice to meeet you")
+start = input("Are you ready for an epic quest? ")
 
 player = create_Character()
 interfaceRenderer.paintInterface('basicInterface', player)
