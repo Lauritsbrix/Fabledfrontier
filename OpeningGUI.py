@@ -2,12 +2,11 @@ import tkinter as tk
 from tkinter import * 
 from tkinter.ttk import *
 
-
 # Opret hovedvinduet
 root = tk.Tk()
 root.title("Luminos")
 
-magePhoto = PhotoImage(file = r"C:\Users\sebzz\Pictures\wizard.png")
+magePhoto = PhotoImage(file = r"wizard.png")
 
 
 # Funktion, der udføres ved at klikke på knappen
