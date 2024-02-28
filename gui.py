@@ -1,11 +1,11 @@
 from tkinter import *
 from tkinter import ttk
+import settings
 
-GAME_WIDTH = 640
-GAME_HEIGHT  = 320
+settings.init()
 
 root = Tk()
-root.geometry(str(GAME_WIDTH) + 'x' + str(GAME_HEIGHT))
+root.geometry(str(settings.gameWidth) + 'x' + str(settings.gameHeight))
 # frame = ttk.Frame(root, width=GAME_WIDTH, height=GAME_HEIGHT)
 
 
