@@ -4,9 +4,10 @@ import settings
 
 settings.init()
 
-root = Tk()
-root.geometry(str(settings.gameWidth) + 'x' + str(settings.gameHeight))
-# frame = ttk.Frame(root, width=GAME_WIDTH, height=GAME_HEIGHT)
+def init():
+    global root
+    root = Tk()
+    root.geometry(str(settings.gameWidth) + 'x' + str(settings.gameHeight))
 
-
+init()
 root.mainloop()
