@@ -1,4 +1,4 @@
-#Præcisions møsnter i forskellige patterns, der skal klikkes inden for 2 spænd af 2 sec, før der kommer et nyt.
+#Præcisions møsnter i forskellige patterns, der skal klikkes inden for et spænd af 2 sec, før der kommer et nyt.
 
 import tkinter as tk
 import random
@@ -9,26 +9,18 @@ def generate_combination():
 def button_click(button_id):
     global current_combination
     global damage
-    global correct_clicks
 
     if button_id in current_combination:
         label.config(text=f"You hit button {button_id}!")
         damage += 10  # Adjust damage as needed
-        correct_clicks += 1
     else:
         label.config(text="Missed!")
-        correct_clicks = 0
-
-    if correct_clicks == 3 and not root_destroyed():
-        update_combination()
-        
 
 def update_combination():
     global current_combination
-    global correct_clicks
     current_combination = generate_combination()
     pattern_label.config(text=f"Current Pattern: {current_combination}")
-    correct_clicks = 0
+    root.after(2000, update_combination)
 
 def root_destroyed():
     try:
@@ -58,7 +50,6 @@ for i in range(1, 10):
     buttons.append(button)
 
 damage = 0
-correct_clicks = 0
 current_combination = generate_combination()
 update_combination()
 
