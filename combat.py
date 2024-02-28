@@ -14,6 +14,9 @@ def main(player, enemy):
     playerHealth = player.stats.health
     enemyHealth = enemy.stats.health
     print(f"player has {playerHealth}, enemy has {enemyHealth}")
+    while player.isAlive and enemy.isAlive:
+        attack(player, enemy)
+        
 
 print("an awesome battle is about to start")
     
@@ -24,6 +27,9 @@ def attack(attacker, deffender):
     damage = attacker.stats.strength
     deffender.stats.health -= damage
     print(f"orc has {deffender.stats.health} hp")
+    
+        
+
 
 
 

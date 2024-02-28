@@ -9,6 +9,7 @@ class character:
         self.race = race
         self.RPGclass = RPGclass
         self.icon = icon
+        self.isAlive = True
 
         if ID == "random":
             self.ID = generateID(settings.idIndex, type)
@@ -19,3 +20,5 @@ class character:
             self.stats = stats(10, 1, 1, 1, 1)
         else:
             self.stats = charStats
+
+
