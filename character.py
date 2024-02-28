@@ -1,8 +1,24 @@
+from stats import stats
+from idManager import generateID, addID
+import settings
+
 class character:
-    def __init__(self, ID, name, race, RPGclass):
-        self.ID = ID
+    def __init__(self, type, name, race, RPGclass, charStats = "default", ID = "random", icon = "@"):
+        self.type = type
         self.name = name
-        #self.type = type
-        #self.gender = gender
         self.race = race
         self.RPGclass = RPGclass
+        self.icon = icon
+        self.isAlive = True
+
+        if ID == "random":
+            self.ID = generateID(settings.idIndex, type)
+        else:
+            self.ID = addID(settings.idIndex, ID, type)
+
+        if charStats == "default":
+            self.stats = stats(10, 1, 1, 1, 1)
+        else:
+            self.stats = charStats
+
+
